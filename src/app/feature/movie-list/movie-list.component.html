@@ -1,0 +1,17 @@
+<h1>{{title}}</h1>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>TITLE</th>
+        <th>RATING</th>
+        <th>YEAR</th>
+        <th>DIRECTOR</th>
+    </tr>
+    <tr *ngFor = "let m of movies">
+        <td>{{m.id}}</td>
+        <td>{{m.title}}</td>
+        <td>{{m.rating}}</td>
+        <td>{{m.year}}</td>
+        <td>{{m.director}}</td>
+    </tr>
+</table>
