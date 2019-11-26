@@ -1,0 +1,17 @@
+<h1>{{title}}</h1>
+<table class="table">
+    <tr>
+        <th>ID</th>
+        <th>FIRST NAME</th>
+        <th>LAST NAME</th>
+        <th>GENDER</th>
+        <th>BIRTH DATE</th>
+    </tr>
+    <tr *ngFor = "let a of actors">
+        <td>{{a.id}}</td>
+        <td>{{a.firstName}}</td>
+        <td>{{a.lastName}}</td>
+        <td>{{a.gender}}</td>
+        <td>{{a.birthDate}}</td>
+    </tr>
+</table>

@@ -4,16 +4,17 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { MovieListComponent } from './feature/movie-list/movie-list.component';
 import { HttpClientModule } from '@angular/common/http';
+import { ActorListComponent } from './feature/actor-list/actor-list.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MovieListComponent
+    MovieListComponent,
+    ActorListComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule
-
   ],
   providers: [],
   bootstrap: [AppComponent]
