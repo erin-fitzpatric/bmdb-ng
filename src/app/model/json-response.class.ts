@@ -3,7 +3,6 @@ export class JsonResponse {
     errors: any;
     meta: any;
 
-
     constructor(data: any, errors: any, meta: any) {
         this.data = data;
         this.errors = errors;

@@ -6,10 +6,10 @@ export class Actor {
     firstName: string;
     lastName: string;
     gender: string;
-    birthDate: number; // unsure about date type???
+    birthDate: Date; 
 
-    constructor(id: number, firstName: string, lastName: string,
-        gender: string, birthDate: number) {
+    constructor(id: number = 0, firstName: string = "", lastName: string = "",
+        gender: string = "", birthDate: Date = new Date()) {
             this.id = id;
             this.firstName = firstName;
             this.lastName = lastName;

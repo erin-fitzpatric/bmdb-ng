@@ -1,17 +1,24 @@
-<h1>{{title}}</h1>
-<table class="table">
-    <tr>
-        <th>ID</th>
-        <th>FIRST NAME</th>
-        <th>LAST NAME</th>
-        <th>GENDER</th>
-        <th>BIRTH DATE</th>
-    </tr>
-    <tr *ngFor = "let a of actors">
-        <td>{{a.id}}</td>
-        <td>{{a.firstName}}</td>
-        <td>{{a.lastName}}</td>
-        <td>{{a.gender}}</td>
-        <td>{{a.birthDate}}</td>
-    </tr>
+<div class='component-content'>
+    <div class='lefthalf'>
+        <span class='component-title'>{{title}} </span>
+        <span><a routerLink='/actors/create'>
+                <img id='createnew' width='20' height='20' src='assets/add-icon.png' title='Add New'></a>
+        </span>
+    </div>
+</div>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th><a (click)="sortBy('id')">ID</a></th>
+            <th><a (click)="sortBy('lastName')">NAME</a></th>
+            <th>ACTION</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let a of actors | sort:sortCriteria:sortOrder">
+            <td>{{a.id}}</td>
+            <td>{{a.lastName +", "+ a.firstName}}</td>
+            <td>E | D</td>
+        </tr>
+    </tbody>
 </table>
