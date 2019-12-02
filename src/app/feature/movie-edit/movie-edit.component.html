@@ -3,43 +3,44 @@
         <span class='component-title'>{{title}} </span>
     </div>
 </div>
-<p *ngIf='!actor'>Loading...</p>
-<div *ngIf='actor'>
+<p *ngIf='!movie'>Loading...</p>
+<div *ngIf='movie'>
     <main class="single">
         <table class="table table-sm">
             <tr>
                 <td>
-                    First Name:
+                    Title:
                 </td>
                 <td>
-                    <input [(ngModel)]="actor.firstName" class="rounded" type="text">
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    Last Name:
-                </td>
-                <td>
-                    <input [(ngModel)]="actor.lastName" class="rounded" type="text">
+                    <input [(ngModel)]="movie.title" class="rounded" type="text">
                 </td>
             </tr>
             <tr>
                 <td>
-                    Gender:
+                    Year:
                 </td>
                 <td>
-                    <input [(ngModel)]="actor.gender" class="rounded" type="text">
+                    <input [(ngModel)]="movie.year" class="rounded" type="number">
                 </td>
             </tr>
             <tr>
                 <td>
-                    Birth Date:
+                    Rating:
                 </td>
                 <td>
-                    <input [(ngModel)]="actor.birthDate" class="rounded" type="date">
+                    <input [(ngModel)]="movie.rating" class="rounded" type="text">
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    Director:
+                </td>
+                <td>
+                    <input [(ngModel)]="movie.director" class="rounded" type="text">
                 </td>
             </tr>
         </table>
     </main>
-    <span><button (click)="save()" class="btn btn-sm btn-primary">Save</button></span>
+    <span><button (click)="save()" class="btn btn-sm btn-primary">Save</button></span> | 
+    <span><button (click)="backClicked()" class="btn btn-sm btn-primary">Back</button></span>
 </div>

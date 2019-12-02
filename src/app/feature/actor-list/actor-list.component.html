@@ -6,7 +6,8 @@
         </span>
     </div>
 </div>
-<table class="table table-striped">
+<p *ngIf='!actors'>Loading...</p>
+<table *ngIf='actors' class="table table-striped">
     <thead>
         <tr>
             <th><a (click)="sortBy('id')">ID</a></th>
@@ -18,7 +19,12 @@
         <tr *ngFor="let a of actors | sort:sortCriteria:sortOrder">
             <td>{{a.id}}</td>
             <td>{{a.lastName +", "+ a.firstName}}</td>
-            <td>E | D</td>
+            <td><a routerLink='/actors/detail/{{a.id}}'><img src='assets/details.png' width='20' height='20'
+                        title='Detail'> </a>
+                |
+                <a routerLink='/actors/edit/{{a.id}}'><img src='assets/pencil-icon.png' width='20' height='20'
+                        title='Edit'></a>
+            </td>
         </tr>
     </tbody>
 </table>

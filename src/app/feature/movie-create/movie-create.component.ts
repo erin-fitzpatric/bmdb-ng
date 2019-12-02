@@ -10,8 +10,8 @@ import { Router } from '@angular/router';
 })
 export class MovieCreateComponent implements OnInit {
 
-  movie: Movie = new Movie();
   title: string = "Movie Create";
+  movie: Movie = new Movie();
 
   constructor(private movieSvc: MovieService,
     private router: Router) { }

@@ -13,6 +13,10 @@ import { BaseComponent } from './feature/base/base.component';
 import { SortPipe } from './pipe/sort.pipe';
 import { MovieCreateComponent } from './feature/movie-create/movie-create.component';
 import { ActorCreateComponent } from './feature/actor-create/actor-create.component';
+import { MovieEditComponent } from './feature/movie-edit/movie-edit.component';
+import { MovieDetailComponent } from './feature/movie-detail/movie-detail.component';
+import { ActorDetailComponent } from './feature/actor-detail/actor-detail.component';
+import { ActorEditComponent } from './feature/actor-edit/actor-edit.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +28,11 @@ import { ActorCreateComponent } from './feature/actor-create/actor-create.compon
     BaseComponent,
     SortPipe,
     MovieCreateComponent,
-    ActorCreateComponent
+    ActorCreateComponent,
+    MovieEditComponent,
+    MovieDetailComponent,
+    ActorDetailComponent,
+    ActorEditComponent
   ],
   imports: [
     BrowserModule,
